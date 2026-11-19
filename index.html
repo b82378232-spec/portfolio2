@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szekercés Balázs - Webfejlesztő Portfólió</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d9381e'/><text x='50%' y='54%' font-family='monospace' font-weight='bold' font-size='52' fill='%23ffc107' text-anchor='middle' dominant-baseline='middle'>&lt;/&gt;</text></svg>">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #d9381e 0%, #f59e0b 100%); }
+        body { background-color: #fffaf0; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigáció -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 384 512" fill="#ffc107">
+                    <path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/>
+                </svg>
+                <span>Szekercés Balázs</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#rolam">Rólam</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#munkaim">Munkáim</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#kapcsolat">Kapcsolat</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="rolam" class="hero-gradient text-white text-center py-5 shadow-sm">
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold">Szia, Szekercés Balázs vagyok!</h1>
+            <p class="lead mb-4"><strong>Junior HTML</strong> fejlesztő | Modern, reszponzív weboldalakat készítek HTML, CSS és Bootstrap segítségével.</p>
+            <a href="#munkaim" class="btn btn-warning text-dark btn-lg fw-bold shadow-sm">Nézd meg a munkáimat</a>
+        </div>
+    </header>
+
+    <!-- Munkáim -->
+    <section id="munkaim" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-2 fw-bold text-danger">Kiemelt Projektek</h2>
+            <p class="text-center text-muted mb-5">Néhány mintaoldal, amelyeken a reszponzív tervezést és a modern dizájnt gyakoroltam.</p>
+            
+            <div class="row g-4">
+                <!-- 1. Kávézó -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-warning">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&h=400&q=80" class="card-img-top" alt="Kávézó">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-danger">Aroma Kávézó & Pékség</h5>
+                            <p class="card-text text-muted small">Modern, mobilbarát bemutatkozó oldal interaktív itallappal, nyitvatartással.</p>
+                            <div class="mt-auto pt-3">
+                                <div class="d-flex gap-2">
+                                    <a href="kavezo.html" target="_blank" class="btn btn-danger btn-sm flex-grow-1 fw-semibold">Élő oldal</a>
+                                    <a href="https://github.com/szekercesb/portfolo" target="_blank" class="btn btn-outline-danger btn-sm">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Okosóra -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-warning">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&h=400&q=80" class="card-img-top" alt="Okosóra">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-danger">Chronos X1 Okosóra</h5>
+                            <p class="card-text text-muted small">Értékesítési céloldal termékbemutató galériával és árlistával.</p>
+                            <div class="mt-auto pt-3">
+                                <div class="d-flex gap-2">
+                                    <a href="okosora.html" target="_blank" class="btn btn-danger btn-sm flex-grow-1 fw-semibold">Élő oldal</a>
+                                    <a href="https://github.com/szekercesb/portfolo" target="_blank" class="btn btn-outline-danger btn-sm">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Személyi edzés -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-warning">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&h=400&q=80" class="card-img-top" alt="Fitnesz">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-danger">FitPro Személyi Edzés</h5>
+                            <p class="card-text text-muted small">Személyes márkaoldal edzésterv-csomagokkal, BMI kalkulátorral.</p>
+                            <div class="mt-auto pt-3">
+                                <div class="d-flex gap-2">
+                                    <!-- PONTOS HIVATKOZÁS AZ EDZES.HTML-RE -->
+                                    <a href="edzes.html" target="_blank" class="btn btn-danger btn-sm flex-grow-1 fw-semibold">Élő oldal</a>
+                                    <a href="https://github.com/szekercesb/portfolo" target="_blank" class="btn btn-outline-danger btn-sm">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kapcsolat -->
+    <section id="kapcsolat" class="bg-warning-subtle py-5 border-top border-warning">
+        <div class="container text-center" style="max-width: 600px;">
+            <h2 class="fw-bold mb-3 text-danger">Dolgozzunk együtt!</h2>
+            <div class="card bg-white border-warning shadow-sm p-4 mb-4">
+                <p class="text-muted small mb-1">E-mail címem:</p>
+                <h4 class="text-danger fw-bold mb-3">szekercesb@gmail.com</h4>
+                <a href="mailto:szekercesb@gmail.com" class="btn btn-danger btn-lg fw-semibold shadow-sm">✉️ E-mail küldése közvetlenül</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lábléc -->
+    <footer class="bg-danger text-white text-center py-3">
+        <small>&copy; 2026 Szekercés Balázs. Minden jog fenntartva.</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

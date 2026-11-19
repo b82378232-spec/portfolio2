@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitPro - Személyi Edzés</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d9381e'/><text x='50%' y='54%' font-family='monospace' font-weight='bold' font-size='52' fill='%23ffc107' text-anchor='middle' dominant-baseline='middle'>&lt;/&gt;</text></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-white">
+
+    <!-- Vissza a főoldalra -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning" href="index.html">⬅ Vissza a Főoldalra</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="py-5 text-center" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80') center/cover;">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold">Hozd ki magadból a maximumot!</h1>
+            <p class="lead mb-4">Személyre szabott edzéstervek és étrend-tanácsadás kezdőknek és haladóknak.</p>
+            <a href="#bmi" class="btn btn-warning text-dark btn-lg fw-bold">Számold ki a BMI-det</a>
+        </div>
+    </header>
+
+    <!-- Csomagok -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 text-warning">Edzésterv Csomagok</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card bg-secondary text-white h-100 border-warning">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Online Coaching</h5>
+                            <h3 class="text-warning fw-bold my-3">15 000 Ft / hó</h3>
+                            <p class="small">Havi edzésterv, étrendi útmutató és heti online konzultáció.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-secondary text-white border-warning h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">10 Alkalmas Bérlet</h5>
+                            <h3 class="text-warning fw-bold my-3">45 000 Ft</h3>
+                            <p class="small">Személyes edzések az edzőteremben, folyamatos technikai korrekcióval.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-secondary text-white h-100 border-warning">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Teljes Átalakulás</h5>
+                            <h3 class="text-warning fw-bold my-3">80 000 Ft / hó</h3>
+                            <p class="small">Heti 3 személyi edzés + személyre szabott makró-alapú étrend.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BMI Kalkulátor -->
+    <section id="bmi" class="py-5 bg-black border-top border-secondary">
+        <div class="container" style="max-width: 500px;">
+            <h2 class="text-center fw-bold mb-4 text-warning">Interaktív BMI Kalkulátor</h2>
+            <div class="card bg-dark border-warning p-4">
+                <div class="mb-3">
+                    <label class="form-label">Testsúly (kg)</label>
+                    <input type="number" id="suly" class="form-control" placeholder="pl. 75">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Magasság (cm)</label>
+                    <input type="number" id="magassag" class="form-control" placeholder="pl. 180">
+                </div>
+                <button onclick="szamolBMI()" class="btn btn-warning text-dark fw-bold w-100">Számítás</button>
+                <div id="eredmeny" class="mt-3 text-center fw-bold fs-5 text-warning"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-3 border-top border-secondary text-muted">
+        <small>&copy; 2026 Szekercés Balázs - FitPro Személyi Edzés</small>
+    </footer>
+
+    <script>
+        function szamolBMI() {
+            let suly = Number(document.getElementById("suly").value);
+            let magassagCm = Number(document.getElementById("magassag").value);
+
+            if (suly > 0 && magassagCm > 0) {
+                let magassagM = magassagCm / 100;
+                let bmi = (suly / (magassagM * magassagM)).toFixed(1);
+                let kategoria = "";
+
+                if (bmi < 18.5) kategoria = "Sovány";
+                else if (bmi < 25) kategoria = "Normál testsúly";
+                else if (bmi < 30) kategoria = "Túlsúlyos";
+                else kategoria = "Elhízott";
+
+                document.getElementById("eredmeny").innerText = "BMI értéked: " + bmi + " (" + kategoria + ")";
+            } else {
+                document.getElementById("eredmeny").innerText = "Kérlek adj meg érvényes adatokat!";
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
